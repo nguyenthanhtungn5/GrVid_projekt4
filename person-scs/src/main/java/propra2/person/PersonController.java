@@ -69,7 +69,7 @@ public class PersonController {
         return "edit";
 	}
 
-    @GetMapping("/projektee")
+    @GetMapping("/projekte")
     public String index(Model model) {
         final Projekt projekt = getEntity("projekt", Projekt.class);
         model.addAttribute("projekt", projekt);
@@ -99,7 +99,7 @@ public class PersonController {
         final Mono<T> mono = WebClient
                 .create()
                 .get()
-                .uri("http://localhost:8080/projekt/projekte-rest/all")
+                .uri("http://projekt:8080/projekte-rest/all")
                 .accept(MediaType.APPLICATION_JSON_UTF8)
                 .retrieve()
                 .bodyToMono(type);
@@ -107,20 +107,20 @@ public class PersonController {
         return mono.block();
     }
 
-    private String server = "localhost";
-    private int port = 8080;
+    // private String server = "localhost";
+    // private int port = 8080;
 
-    @RequestMapping("/projekte")
-    public String mirrorRest() throws URISyntaxException
-    {
-        RestTemplate restTemplate = new RestTemplate();
-        URI uri = new URI("http", null, server, port, "/projekt/projekte-rest/all", "", null);
+    // @RequestMapping("/projekte")
+    // public String mirrorRest() throws URISyntaxException
+    // {
+        // RestTemplate restTemplate = new RestTemplate();
+        // URI uri = new URI("http", null, server, port, "/projekt/projekte-rest/all", "", null);
 
         ////ResponseEntity<Projekt> responseEntity =
         ////        restTemplate.exchange(uri, method, new HttpEntity<String>(body), Projekt.class);
-        ResponseEntity<String> response
-                = restTemplate.getForEntity(uri, String.class);
+        // ResponseEntity<String> response
+                // = restTemplate.getForEntity(uri, String.class);
 
-        return "projektee";
-    }
+        // return "projektee";
+    // }
 }

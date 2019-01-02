@@ -9,13 +9,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("projekte-rest")
 public class ProjektRestController {
     @Autowired
     ProjektRepository projektRepository;
 
-    @GetMapping("/projekte-rest/all")
-    public Projekt all() {
-        Optional<Projekt> projekts = projektRepository.findById(new Long(1));
-        return projekts.get();
+    @GetMapping("/all")
+    public List<Projekt> all() {
+        List<Projekt> projekts = projektRepository.findAll();
+        return projekts;
     }
 }
