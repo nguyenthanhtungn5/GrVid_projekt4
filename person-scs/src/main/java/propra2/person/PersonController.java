@@ -71,8 +71,8 @@ public class PersonController {
 
     @GetMapping("/projekte")
     public String index(Model model) {
-        final Projekt projekt = getEntity("projekt", Projekt.class);
-        model.addAttribute("projekt", projekt);
+        final Projekt[] projekte = getEntity("projekt", Projekt[].class);
+        model.addAttribute("projekte", projekte);
         return "projektee";
     }
 
@@ -106,21 +106,4 @@ public class PersonController {
 
         return mono.block();
     }
-
-    // private String server = "localhost";
-    // private int port = 8080;
-
-    // @RequestMapping("/projekte")
-    // public String mirrorRest() throws URISyntaxException
-    // {
-        // RestTemplate restTemplate = new RestTemplate();
-        // URI uri = new URI("http", null, server, port, "/projekt/projekte-rest/all", "", null);
-
-        ////ResponseEntity<Projekt> responseEntity =
-        ////        restTemplate.exchange(uri, method, new HttpEntity<String>(body), Projekt.class);
-        // ResponseEntity<String> response
-                // = restTemplate.getForEntity(uri, String.class);
-
-        // return "projektee";
-    // }
 }

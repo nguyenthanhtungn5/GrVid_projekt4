@@ -11,7 +11,7 @@
     <a href="/projekt">Start Seite</a>
 </p>
 <br>
-<div style="padding: 40px;" class="col-xs-6 col-sm-4" th:each="projekt : ${projekts}">
+<div style="padding: 40px;" class="col-xs-6 col-sm-4" th:each="projekt : ${projekte}">
 <h3 th:text="${projekt.getName()}"><b>Name</b></h3>
 <ul class="list-group">
     <li class="list-group-item" th:text="'Beschreibung: ' + ${projekt.getDescription()}" >Beschreibung</li>
