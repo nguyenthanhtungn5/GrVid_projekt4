@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
-<br>
-<p style="font-weight: bold; font-size: xx-large; text-align: center">Personen</p>
-<br>
+<p class="navbar navbar-dark bg-primary">
+    <a href="/person" class="navbar-brand d-flex align-items-center">
+        <strong>Personseite</strong>
+    </a>
+</p>
 <p style="text-align: center">
-    <a style="font-color: black; font-size: x-large; font-weight: bold;"
+    <a class="btn btn-primary my-2"
        href="/person/addPerson">Add Person</a>
 </p>
 <p style="text-align: center">
-    <a style="font-color: black; font-size: x-large; font-weight: bold;"
+    <a class="btn btn-primary my-2"
        href="/person/projekte">Alle Projekte</a>
 </p>
 <div class="row">
@@ -35,6 +37,9 @@
             </li>
         </ul>
     </div>
+</div>
+<div class="col-md-3 mb-3">
+    <p>© Made by Happy-Gruppe</p>
 </div>
 </body>
 </html>

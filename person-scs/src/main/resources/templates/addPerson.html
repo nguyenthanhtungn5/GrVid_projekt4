@@ -9,14 +9,17 @@
 <body>
 
 <form action="/person/add" method="get">
-    Name:         <input type="text" name="name"><br>
-    Jahreslohn:   <input type="number" name="jahreslohn"><br>
-    Kontaktdaten: <input type="email" name="kontaktdaten"><br>
-    Skills:       <input type="text" name="skills"><br><br>
-    Vergangene Projekte: <input type="text" name="vergangeneProjekte"><br>
-
-    <input type="submit" value="Submit">
+    <div class="col-md-3 mb-3">
+        Name:         <input type="text" name="name"><br>
+        Jahreslohn:   <input type="number" name="jahreslohn"><br>
+        Kontaktdaten: <input type="email" name="kontaktdaten"><br>
+        Skills:       <input type="text" name="skills"><br><br>
+        Vergangene Projekte: <input type="text" name="vergangeneProjekte"><br>
+    </div>
+    <button class="btn btn-primary my-2" type="submit">Submit</button>
 </form>
-
+<div class="col-md-3 mb-3">
+    <p>© Made by Happy-Gruppe</p>
+</div>
 </body>
 </html>
